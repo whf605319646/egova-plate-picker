@@ -2,7 +2,7 @@
     "name": "plate-picker",
     "version": "1.0.0",
     "description": "plate-picker library",
-    "author": "jason <jasonsoop@gmail.com>",
+    "author": "egova",
     "scripts": {
         "dev": "webpack-dev-server --content-base test/ --open --inline --hot --compress --history-api-fallback --port 8020 --config build/webpack.dev.config.js",
         "dist:clean": "node build/build.clean.js",

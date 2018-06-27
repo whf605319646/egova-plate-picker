@@ -1,4 +1,4 @@
 export const PLATE_PICKER_OPTION = {
-    defaultProvince: "鄂",
+    defaultProvince: "京",
     place: "left-start"
 };

@@ -15,6 +15,22 @@
                 </template>
                 <u-code slot="code" lang="html">{{codes.props}}</u-code>
             </u-example>
+            <p>组件传值</p>
+            <u-example title="组件传值">
+                <template slot="case">
+                    <plate v-on:change="changePlate" ref="plate"></plate>
+                    父组件中获取选择的车牌号：<i-input v-model="plateNo" style="width:80%;margin:10px 0;"></i-input>
+                    父组件中获取选择的车牌类型：<i-input v-model="plateType" style="width:75%;margin:10px 0;"></i-input>
+                    <i-button type="primary" v-on:click="setData">父组件设置车牌组件的值</i-button>
+                    <i-button type="ghost" v-on:click="reset">重置</i-button>
+                </template>
+                <template slot="desc">
+                    <p>通过<code>change</code>事件来监测组件选择值的变化进行一些业务处理</p>
+                    <p>通过<code>setPlateData</code>实例方法对组件进行赋值，有时候编辑信息时需要设置初始值可以使用</p>
+                    <p>通过<code>reset</code>实例方法对组件进行重置</p>
+                </template>
+                <u-code slot="code" lang="html">{{codes.method}}</u-code>
+            </u-example>
             <div class="api">
                 <h2>API</h2>
                 <h3>配置属性</h3>
@@ -116,5 +132,17 @@ import * as codes from "examples/codes";
 })
 export default class Plate extends View{
     protected codes: any = codes;
+    protected plateNo: string = "";
+    protected plateType: string = "";
+    protected changePlate(arr: Array<string>) {
+        this.plateNo = arr[0];
+        this.plateType = arr[1];
+    }
+    protected setData() {
+        (<PlatePicker>this.$refs["plate"]).setPlateData("鄂A123", "LargeCar");
+    }
+    protected reset() {
+        (<PlatePicker>this.$refs["plate"]).reset();
+    }
 }
 </script>

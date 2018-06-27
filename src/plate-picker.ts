@@ -132,7 +132,7 @@ export default class PlatePicker extends Component {
       this.activePlateIndex = "";
     }
   }
-  protected reset() {
+  public reset() {
     this.plateNo = "";
     this.activePlateIndex = "";
   }
