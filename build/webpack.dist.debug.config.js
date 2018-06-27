@@ -13,8 +13,8 @@ module.exports = merge(webpackBaseConfig,
     {
         path: path.resolve(__dirname, "../dist"),
         publicPath: "/dist/",
-        filename: "plate-picker.js",
-        library: "plate-picker",
+        filename: "egova-plate-picker.js",
+        library: "egova-plate-picker",
         libraryTarget: "umd",
         umdNamedDefine: true
     },

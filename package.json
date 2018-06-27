@@ -1,6 +1,6 @@
 {
-    "name": "plate-picker",
-    "version": "1.0.0",
+    "name": "egova-plate-picker",
+    "version": "1.0.1",
     "description": "plate-picker library",
     "author": "egova",
     "scripts": {
@@ -15,20 +15,22 @@
     "files": [
         "dist"
     ],
-    "main": "dist/flagwind-echarts.js",
+    "main": "dist/egova-plate-picker.js",
     "typings": "dist/typings/index.d.ts",
     "keywords": [
-        "flagwind",
+        "egova",
+        "iview",
+        "plate-picker",
         "typescript"
     ],
     "license": "MIT",
-    "homepage": "http://www.flagwind.org",
+    "homepage": "https://github.com/sjhleo",
     "repository": {
         "type": "git",
-        "url": "https://github.com/flagwind/flagwind-web"
+        "url": "https://github.com/sjhleo/egova-plate-picker"
     },
     "bugs": {
-        "url": "https://github.com/flagwind/flagwind-web/issues"
+        "url": "https://github.com/sjhleo/egova-plate-picker/issues"
     },
     "dependencies": {
         "lodash.debounce": "^4.0.8"
