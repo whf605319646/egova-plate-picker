@@ -54,7 +54,7 @@
                         </tr>
                         <tr>
                             <td>defaultProvince</td>
-                            <td>最常用省份</td>
+                            <td>最常用省份,除了给每个组件单独进行绑定值外，可以设置window对象下的componentsOption.PLATE_PICKER_OPTION.defaultProvince的值来给项目中的组件设置首选省份</td>
                             <td>String</td>
                             <td>-</td>
                             <td>京</td>
@@ -68,7 +68,7 @@
                         </tr>
                         <tr>
                             <td>place</td>
-                            <td>弹出窗口方位</td>
+                            <td>弹出窗口方位,除了给每个组件单独进行绑定值外，可以设置window对象下的componentsOption.PLATE_PICKER_OPTION.place来给项目中的组件设置弹出方位</td>
                             <td>String</td>
                             <td>-</td>
                             <td>left-start</td>

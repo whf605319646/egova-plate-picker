@@ -34,6 +34,12 @@ module.exports = webpackMerge(webpackBaseConfig,
     },
     plugins: 
     [
+        new webpack.DefinePlugin
+        ({
+            "process.env": {
+                NODE_ENV: '"debugger"'
+            }
+        }),
         new FriendlyErrorsPlugin(),
         new webpack.optimize.CommonsChunkPlugin({ name: "vendors", filename: "vendor.bundle.js" }),
         new webpack.HotModuleReplacementPlugin(),
