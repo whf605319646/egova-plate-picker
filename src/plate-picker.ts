@@ -7,7 +7,7 @@ import { PLATE_PICKER_OPTION } from "./plate-picker-options";
   template: require("./plate-picker.html")
 })
 export default class PlatePicker extends Component {
-  @config({ default: {} })
+  @config({ default: function() {return new Object();} })
   public btnStyleObj: Object;
 
   @config({ default: PLATE_PICKER_OPTION.defaultProvince })
