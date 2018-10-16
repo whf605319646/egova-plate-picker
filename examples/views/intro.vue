@@ -12,13 +12,14 @@
                     <p>通过设置<code>defaultProvince</code>属性改变常用前缀</p>
                     <p>通过设置<code>hidePlateType</code>属性控制是否隐藏号牌类型选择</p>
                     <p>通过设置<code>place</code>属性控制控制弹出窗口的方位.可选值为<code>top</code><code>top-start</code><code>top-end</code><code>bottom</code><code>bottom-start</code><code>bottom-end</code><code>left</code><code>left-start</code><code>left-end</code><code>right</code><code>right-start</code><code>right-end</code></p>
+                    <p>通过设置<code>enums</code>属性改变组件取值类型,为true时取值类似Car，LargeCar这种，false时取值为01,02这种</p>
                 </template>
                 <u-code slot="code" lang="html">{{codes.props}}</u-code>
             </u-example>
             <p>组件传值</p>
             <u-example title="组件传值">
                 <template slot="case">
-                    <plate v-on:change="changePlate" ref="plate"></plate>
+                    <plate v-on:change="changePlate" ref="plate" :enums=false></plate>
                     父组件中获取选择的车牌号：<i-input v-model="plateNo" style="width:80%;margin:10px 0;"></i-input>
                     父组件中获取选择的车牌类型：<i-input v-model="plateType" style="width:75%;margin:10px 0;"></i-input>
                     <i-button type="primary" v-on:click="setData">父组件设置车牌组件的值</i-button>
@@ -72,6 +73,13 @@
                             <td>String</td>
                             <td>-</td>
                             <td>left-start</td>
+                        </tr>
+                        <tr>
+                            <td>enums</td>
+                            <td>取值是否使用枚举类型</td>
+                            <td>Boolean</td>
+                            <td>-</td>
+                            <td>true</td>
                         </tr>
                     </tbody>
                 </table>

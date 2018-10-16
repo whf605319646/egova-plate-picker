@@ -21,6 +21,11 @@ export default class PlatePicker extends Component {
   // 是否禁用
   @config({default: false})
   public disabled: boolean;
+  // 是否已枚举的方式取值，如果为true，则返回的type和设置的type值为“Car” 这种形式，如果为false，则为01这种形式
+  @config({default: true})
+  public enums: boolean;
+
+  public values: Array<string> = this.enums ? ["Car", "LargeCar", "NewEnergyLargeCar", "NewEnergyCar"] : ["02", "01", "51", "52"];
 
   public defaultAlias: Array<any> = [
     "津", "京", "沪", "渝", "鄂", "湘",
@@ -135,5 +140,8 @@ export default class PlatePicker extends Component {
   public reset() {
     this.plateNo = "";
     this.activePlateIndex = "";
+  }
+  public changeType(index: number) {
+    this.activePlateIndex = this.values[index];
   }
 }
