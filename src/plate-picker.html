@@ -1,7 +1,9 @@
 <div class="plate-picker">
     <div>
         <i-poptip v-model="visible" :placement="place" width="400" :class="{'disabled':disabled}">
-            <i-input v-model="plateNo" :disabled="disabled"  :style="btnStyleObj" :placeholder="hidePlateType?'请选择号牌和号牌类型':'请选择号牌号码'"></i-input>
+            <i-input v-model="plateNo" :disabled="disabled"  :style="btnStyleObj" :placeholder="hidePlateType?'请选择号牌和号牌类型':'请选择号牌号码'">
+				<slot name="prepend"></slot>
+			</i-input>
 
             <div class="plate" slot="content">
                 <div class="vehicleType" v-if="hidePlateType">
